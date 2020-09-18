@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>yerin - info</title>
+     <meta charset="utf-8">
+     <script>
+         function day_night_bt(bt){
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            var target =  document.querySelector('body');
+                if(bt.value==='night')
+                {
+                    target.style.backgroundColor='black';
+                    target.style.color='white';
+                    bt.value='day';
+                    while(i<4){
+                        alist[i].style.color='red';
+                        console.log(alist[i]);
+                        i=i+1;
+                    }
+                
+                }
+                
+                else
+                {
+                    target.style.backgroundColor='white';
+                    target.style.color='black';
+                    bt.value='night';
+                    while(i<4){
+                        alist[i].style.color='black';
+                        i=i+1;
+                    }
+                }
+         }
+     </script>
+  <link rel="stylesheet" href="style.css"/>    
+</head>
+
+
+ <body style="background-color:white; color: black;">
+     <h1><a href = "index_2.html" title = "메인 페이지로 이동">이예린</a></h1>
+    
+    <input ID="bt" type="button" value="night" onclick="day_night_bt(this)">
+
+
+     <div id="grid">
+         <div>
+        <ol>
+            <li> <a href = "1_2.html" title = "인적사항 페이지로 이동" class="act">인적사항</a> </li>
+            <li> <a href = "2_2.html" title = "취미1 페이지로 이동" class="saw"> 취미1</a></li>
+            <li> <a href = "3_2.html" title = "취미2 페이지로 이동" class="saw"> 취미2</a></li>
+        </ol>
+             </div>
+<div id="text">
+     <h2>인적사항</h2>
+        <img src="yerin.jpg" width="200">
+        <p>안녕하세요 저는 <strong>이<u>예</u>린</strong> 입니다. 구로에서 살고있고 나이는 27살 입니다. 키는 161이고 A형입니다. 생일은 7월 19일 입니다. 전화번호는 010 4305 0719 입니다. 마지막자리가 제 생일이니까 꼭 기억하세요</p>
+    </div>
+     
+     </div>
+ </body>
+</html>
