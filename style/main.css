@@ -142,7 +142,7 @@
   height: 40px;
   padding: 8px;
 }
-.contents-container__btn:first-child {
+.contents-container__likeBtn {
   background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png);
   background-size: 24px 22px;
   background-repeat: no-repeat;
@@ -199,7 +199,7 @@
   padding-top: 22px;
   position: fixed;
   top: 84px;
-  right: 164px;
+  left: calc(50vw + 165px);
 }
 .recommend-header__container {
   margin: 20px 0 15px;
@@ -235,4 +235,32 @@
 }
 .main-footer__link a {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.storys__container {
+  box-sizing: border-box;
+  height: 118px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: 0.1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 16px 0 16px 16px;
+}
+.story {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  margin-right: 0;
+}
+.story__profile {
+  width: 56px;
+  top: 56px;
+  margin-bottom: 4px;
+  border-radius: 50%;
+}
+.story__ID {
+  font-weight: 300;
 }

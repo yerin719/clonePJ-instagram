@@ -29,11 +29,19 @@
             <img class="login-box__logo" src="img/logo_text.png" />
 
             <form class="login-form display--colJystifyCenter">
-              <input class="login-form__ID" type="text" />
-              <span class="ID-placeholder"
-                >전화번호, 사용자 이름 또는 이메일</span
-              >
-              <input class="login-form__PW" type="password" />
+              <input
+                class="login-form__ID"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                type="text"
+              />
+              <span class="ID-placeholder">이메일</span>
+              <input
+                class="login-form__PW"
+                type="password"
+                required
+                minlength="4"
+              />
               <span class="PW-placeholder">비밀번호</span>
               <button class="login-form__btlogin btn-disabled">로그인</button>
               <div class="login-box__OR">&emsp;또는&emsp;</div>

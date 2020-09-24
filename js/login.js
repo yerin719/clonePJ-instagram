@@ -28,9 +28,8 @@ function downPlaceholder(input, placeholder) {
   placeholder.classList.remove(`${placeholder.classList[0]}Upper`);
   input.classList.remove("downText");
 }
-function isFill() {
-  //   console.log(loginBtn.style);
-  if (loginInputs[0].value && loginInputs[1].value) {
+function isValid(validity) {
+  if (validity) {
     loginBtn.classList.remove("btn-disabled");
   } else {
     loginBtn.classList.add("btn-disabled");
@@ -38,19 +37,17 @@ function isFill() {
 }
 
 function handleInput(event) {
+  // event.preventDefault();
   const inputTarget = event.target;
   const inputTargetPlaceholder = inputTarget.nextElementSibling;
+  console.log(event);
+
   if (inputTarget.value) {
     upPlaceholderANDdownText(inputTarget, inputTargetPlaceholder);
-    isFill();
   } else {
     downPlaceholder(inputTarget, inputTargetPlaceholder);
-    isFill();
   }
-}
-
-function handleform(event) {
-  console.log(event);
+  isValid(loginForm.checkValidity());
 }
 
 function init() {
